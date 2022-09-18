@@ -1,0 +1,62 @@
+/* Un reinicio de CSS. Es una forma de asegurarse de que todos los navegadores comiencen con los mismos
+estilos predeterminados. */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Centrar la tarjeta en el centro de la pantalla. */
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilizando la tarjeta. */
+.card {
+  background-color: antiquewhite;
+  width: 450px;
+  height: auto;
+  margin: 2em;
+  border: 3px solid;
+  border-color: black;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 1px 1px 20px black;
+}
+
+/* Estilizando la cita. */
+.card-quote {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Estilo del autor de la cita. */
+.card-author {
+  padding-bottom: 10px;
+  margin-left: auto;
+  width: max-content;
+}
+
+/* Estilizando el botón. */
+.card-btn {
+  display: block;
+  margin-left: auto;
+  color: white;
+  padding: 5px;
+  border: 1px solid;
+  width: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Hacer que el botón sea más grande y más brillante cuando pasas el cursor sobre él. */
+.card-btn:hover {
+  filter: brightness(2);
+  transform: scale(1.2);
+  transition: filter 300ms ease, transform 300ms ease;
+}
