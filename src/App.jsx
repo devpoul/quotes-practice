@@ -3,6 +3,7 @@ import "./styles/App.css";
 import quotes from "./json/quotes.json";
 import QuoteBox from "./components/QuoteBox";
 import color from "./utils/color";
+import ShowComponent from "./components/ShowComponent";
 
 function App() {
   /* Esta función me calcula un índice random */
@@ -15,6 +16,9 @@ function App() {
   /* utilizo una prop que se enlaza con QuoteBox.jsx */
   const [randomQuote, setRandomQuote] = useState(firstQuote);
   const [randomColor, setRandomColor] = useState(firstColor);
+
+  const [component, setComponent] = useState(false);
+  const handleComponent = () => setComponent(!component);
 
   const backgroundPrincipal = { backgroundColor: randomColor };
 
@@ -32,6 +36,13 @@ function App() {
           randomColor={randomColor}
           getRandomAll={getRandomAll}
         />
+      </div>
+
+      <div className="showComponentJsx">
+        <button className="btnShow" onClick={handleComponent}>
+          Mostrar/Ocultar Componente
+        </button>
+        {component ? <ShowComponent /> : <h3>"Clic para abrir"</h3>}
       </div>
     </div>
   );

@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800&display=swap');
+
 /* Un reinicio de CSS. Es una forma de asegurarse de que todos los navegadores comiencen con los mismos
 estilos predeterminados. */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
 }
 
 /* Centrar la tarjeta en el centro de la pantalla. */
@@ -11,6 +14,7 @@ estilos predeterminados. */
   width: 100%;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -18,7 +22,7 @@ estilos predeterminados. */
 /* Estilizando la tarjeta. */
 .card {
   background-color: antiquewhite;
-  width: 450px;
+  width: 500px;
   height: auto;
   margin: 2em;
   border: 3px solid;
@@ -32,6 +36,8 @@ estilos predeterminados. */
 .card-quote {
   font-size: 18px;
   margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 /* Estilo del autor de la cita. */
@@ -59,4 +65,59 @@ estilos predeterminados. */
   filter: brightness(2);
   transform: scale(1.2);
   transition: filter 300ms ease, transform 300ms ease;
+}
+
+/* Centrar la imagen y el botón. */
+.showComponentJsx {
+  padding: 1em;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Estilizando la imagen del autor. */
+.imgAuthor {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  border: 2px solid;
+  border-radius: 15px;
+  box-shadow: 1px 1px 20px black;
+}
+
+/* Estilizando el botón. */
+.btnShow {
+  padding: 3px 5px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+
+/* Hacer que el botón sea más grande y más brillante cuando pasas el cursor sobre él. */
+.btnShow:hover {
+  filter: brightness(2);
+  transform: scale(1.2);
+  transition: filter 300ms ease, transform 300ms ease;
+  -webkit-filter: brightness(2);
+}
+
+@media (max-width:520px) {
+  .card {
+    width: 300px;
+  }
+
+  .card-quote {
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  .btnShow {
+    font-size: 12px;
+  }
+
+  .titleImg {
+    font-size: 15px;
+  }
 }
